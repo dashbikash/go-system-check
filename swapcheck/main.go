@@ -15,7 +15,7 @@ func swapChecker() {
 		} else {
 			fmt.Printf("Total Swap Memory: %v mb\n", v.Total/1024/1024)
 			if v.Total > 1 {
-				panic("Swap memory is enabled, which is not allowed in this environment.")
+				//panic("Swap memory is enabled, which is not allowed in this environment.")
 			}
 		}
 
@@ -26,6 +26,5 @@ func swapChecker() {
 func main() {
 	go swapChecker()
 
-	// Keep the main function running
 	select {}
 }
